@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.background-design {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-design > .shape {
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  filter: blur(200px);
+  opacity: 0.8;
+}
+
+.shape1 {
+  background-color: rgb(235, 3, 204);
+  left: 40%;
+}
+
+.shape2 {
+  background-color: gold;
+  left: 10px;
+  top: 10px;
+  border-radius: 100%;
+}
+
+.shape3 {
+  background-color: rgb(5, 143, 255);
+  bottom: 0px;
+  border-radius: 50px;
+}
+
+.shape4 {
+  background-color: rgb(255, 0, 98);
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+}
+
+.shape5 {
+  background-color: rgb(255, 0, 200);
+  right: 0px;
+  top: 0px;
+  border-radius: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 400px; /* Add appropriate width */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.5s all ease;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details h2 {
+  margin: 5px 0;
+  color: darkblue;
+  font-weight: bolder;
+}
+
+.details p {
+  margin: 5px 0;
+  color: rgb(8, 8, 8);
+  font-size: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack image and details vertically */
+    width: 90%; /* Reduce card width */
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .details h2 {
+    font-size: 20px;
+  }
+
+  .details p {
+    font-size: 14px;
+  }
+
+  .background-design > .shape {
+    height: 300px; /* Reduce size */
+    width: 300px;
+    filter: blur(100px); /* Adjust blur */
+  }
+}
